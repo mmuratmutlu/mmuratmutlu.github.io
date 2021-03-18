@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.container {
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height: 8vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6vh;
+    padding-bottom:6vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+}
+.logo {
+    height: 6vh;
+}   
+.pagesWrapper{
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    width: 50vw;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.pageButton{
+    display:flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    color:#666666;
+    background-color: transparent;
+
+}
+.enableButton{
+    color:#303cac;
+    font-weight: bold;
+
+}
+.pageButton:focus {outline:none !important}
+.pageButtonDot{
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+.enableDot{
+    background-color: #303cac;
+}
+
+.navButton {
+    width:5vh;
+    height: 5vh;
+    background-color: black;
+}
+
+@media screen and (max-width: 800px) {
+    .pagesWrapper{
+        display: none;
+    }
+   }
+   

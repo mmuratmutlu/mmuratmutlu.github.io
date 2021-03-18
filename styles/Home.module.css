@@ -5,15 +5,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #edf2f8;
+
 }
 
 .main {
+  position: relative;
   padding: 5rem 0;
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .footer {
@@ -113,10 +117,135 @@
 .logo {
   height: 1em;
 }
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+}
+.round {
+  display: flex;
+  width: 30vw;
+  height: 30vw;
+  overflow: hidden;
+  align-items: flex-end;
+  border-radius: 40vw;
+  background: rgb(225,229,238);
+  background: linear-gradient(135deg, rgba(225,229,238,0.7763480392156863) 0%, rgba(217,223,232,0.7987570028011204) 7%, rgba(212,218,228,1) 12%, rgba(207,213,224,1) 17%, rgba(201,208,219,1) 23%, rgba(195,202,214,1) 29%, rgba(182,190,203,1) 39%, rgba(181,189,202,1) 50%, rgba(181,189,202,1) 54%, rgba(180,188,202,1) 59%, rgba(179,187,201,1) 65%, rgba(179,187,201,1) 70%, rgba(179,187,201,1) 75%, rgba(178,186,200,1) 94%, rgba(165,174,189,1) 100%); 
+ }
 
-@media (max-width: 600px) {
+ .myphoto {
+    display: flex;
+    position: absolute;
+    top:15%;
+    right:30%;
+    border-radius: 10%;
+    overflow: hidden;
+    z-index: 2;
+  }
+ 
+  .talkingBalloon{
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border-radius: 2vh; 
+    width:fit-content;
+    align-items: center;
+    padding-left: 1vw;
+    padding: 2vh;
+    z-index: 2;
+    background:rgba(255, 255, 255,0.9);
+  }
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-left: 1vw;
+  }
+
+  .textContainer > h3 {
+    margin: 0;
+  }
+  .textContainer > h4 {
+    color: #666666;
+    margin: 0;
+    padding-bottom: 0.3vw;
+
+  }
+  .textContainer > h5 {
+    color: #666666;
+    margin: 0;
+    padding-bottom: 0.3vw;
+
+  }
+
+  .wave {
+    font-size: 35px;
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+  .techContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30vw;
+  }
+  .techLogo{
+    padding-bottom: 3vw;
+  }
+
+@media (max-width: 800px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+  .frame {
+
+    width: 50vw;
+    height: 50vw;
+  }
+  .round {
+    width: 45vw;
+    height: 45vw;
+    border-radius: 100vw;
+    
+    }
+    .main {
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    }
+    .talkingBalloon{
+      position: relative;
+      top:0  !important;
+      left:0 !important;
+      margin-bottom: 20px;
+    }
+    .myphoto {
+      position: relative;
+      width: 50vw !important;
+      top:0  !important;
+      left:0 !important;
+      margin-bottom: 20px;
+
+    }
+
 }
+
