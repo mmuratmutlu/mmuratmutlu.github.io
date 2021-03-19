@@ -1,5 +1,2 @@
-const main = process.env.DEPLOY_TARGET === 'gh-main';
-
-module.exports = {
-  assetPrefix: main ? '/mmuratmutlu.github.io/' : ''   // customize this value
-};
+const withCSS = require('@zeit/next-css')
+module.exports = withCSS({/* my next config */})
